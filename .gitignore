@@ -1,0 +1,14 @@
+# Local config
+.gitlintwizardrc
+VERSION
+
+# System files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.bak
