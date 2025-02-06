@@ -26,7 +26,7 @@ curl -L https://raw.githubusercontent.com/Adi-ty/GitLint-Wizard/main/gitlint-wiz
 ### Manual Installation
 
 ```bash
-git clone https://github.com/{your-username}/GitLint-Wizard.git
+git clone https://github.com/Adi-ty/GitLint-Wizard.git
 cd gitlintwizard
 ./gitlintwizard.sh install
 ```
