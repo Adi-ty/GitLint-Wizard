@@ -1,18 +1,25 @@
 # GitLint Wizard 🔮✨
 
-A lightweight Git commit message enforcer with auto-versioning and emoji support, built purely in Bash.
+A smart Git commit enforcer with **Conventional Commits validation**, **auto-versioning**, and **AI-powered message generation**.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 
+
+
 ## Features
 
+### Core Features
 - 🚦 Enforce Conventional Commit standards
-- 🎨 Automatic emoji prefixing
-- 📦 Semantic version bumping
+- 🚀 Automatic semantic version bumping
+- 😎 Type-specific emoji prefixes
 - 🔧 Fully configurable rules
-- 🔒 Pre-commit hook integration
-- 🐧 Zero dependencies (pure Bash)
+- 🛡️ Pre-commit hook integration
+
+### AI Features
+- 🤖 AI-generated commit messages
+- 🔍 Context-aware analysis of `git diff`
+- ✅ Auto-validation of AI suggestions
 
 ## Installation
 
@@ -31,6 +38,17 @@ cd gitlintwizard
 ./gitlintwizard.sh install
 ```
 
+### AI Requirements
+1. Get Gemini API Key: [Gemini API Key](https://aistudio.google.com/apikey)
+2. Install Dependencies
+```bash
+# macos
+brew install jq
+
+# Linux
+sudo apt-get install jq
+```
+
 ### Usage
 
 Commit normally - the wizard will guide you:
@@ -43,6 +61,20 @@ Valid message format:
 
 ```bash
 type(scope): description [JIRA-123]
+```
+
+#### AI-Powered Commits
+```bash
+# Stage changes first
+git add .
+
+# Generate and commit
+./gitlintwizard.sh ai-commit
+
+🤖 Analyzing changes...
+Use this commit message?: 'feat(auth): implement password strength checker' [Y/n] y
+✨ feat(auth): implement password strength checker
+Version bumped to 1.2.0!
 ```
 
 ### Configuration
@@ -64,6 +96,9 @@ USE_EMOJI=true
 
 # Auto-versioning
 AUTO_VERSION=true
+
+# Required for AI features
+GEMINI_API_KEY="your-api-key"
 ```
 
 ### How It Works
